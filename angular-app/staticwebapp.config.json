@@ -7,5 +7,17 @@
   },
   "platform": {
     "apiRuntime": "node:18"
-  }
+  },
+  "routes": [
+    {
+      "route": "/api/products/*",
+      "allowedRoles": [
+        "authenticated"
+      ]
+    },
+    {
+      "route": "/.auth/login/github",
+      "statusCode": 404
+    }
+  ]
 }
